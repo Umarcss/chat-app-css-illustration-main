@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+#booking {
+  max-width: 445px;
+  margin: 0 auto;
+  display: grid;
+  gap: 24px;
+  text-align: center;
+  margin-top: 64px;
+  margin-bottom: 63px;
+  @include respond(large, min) {
+    max-width: unset;
+    margin: unset;
+    grid-area: text;
+    text-align: left;
+  }
+}
+
+#booking p {
+  @include text-preset(typo.$text-preset-2);
+  color: $clr-body-text;
+  padding: 0 32px;
+  @include respond(large, min) {
+    padding: 0;
+  }
+}

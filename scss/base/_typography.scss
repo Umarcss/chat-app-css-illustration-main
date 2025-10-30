@@ -1,0 +1,50 @@
+@use "../abstracts" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+$font-body: "Rubik", sans-serif;
+
+$text-preset-1: (
+  family: $font-body,
+  size: 40px,
+  lineHeight: 1.2,
+  letterSpacing: 0,
+  weight: 500,
+);
+
+$text-preset-2: (
+  family: $font-body,
+  size: 16px,
+  lineHeight: 1.75,
+  letterSpacing: 0,
+  weight: 400,
+);
+
+$text-preset-3: (
+  family: $font-body,
+  size: 12px,
+  lineHeight: 1.2,
+  letterSpacing: 0,
+  weight: 700,
+);
+
+$text-preset-4: (
+  family: $font-body,
+  size: 11px,
+  lineHeight: 1.2,
+  letterSpacing: 0,
+  weight: 500,
+);
+
+$text-preset-5: (
+  family: $font-body,
+  size: 8px,
+  lineHeight: 1.2,
+  letterSpacing: 0,
+  weight: 400,
+);
+
+h2 {
+  @include text-preset($text-preset-1);
+  color: $clr-heading;
+}

@@ -1,0 +1,44 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+#chat-app {
+  @include respond(large, min) {
+    grid-area: mobile;
+  }
+}
+
+.mobile-wrapper {
+  background-color: $clr-white;
+  width: 247px;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 11px 9.5px;
+  box-shadow: 0 30px 60px -10px hsla(271, 36%, 24%, 0.251);
+  position: relative;
+  z-index: 1000;
+}
+
+.white-blob {
+  display: block;
+  background-color: $clr-white;
+  width: 129px;
+  height: 29px;
+  border-radius: 0 0 14px 14px;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mobile-container {
+  background-color: $clr-screen-bg;
+  border: 1px solid hsla(271, 36%, 24%, 0.05);
+  border-radius: 20px;
+}
+
+.messages-container {
+  display: grid;
+  gap: 16px;
+  padding: 11px 7.5px 16px 7.5px;
+}

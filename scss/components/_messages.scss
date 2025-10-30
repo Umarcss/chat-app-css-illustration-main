@@ -1,0 +1,97 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+.messages-sent {
+  display: grid;
+  gap: 8px;
+}
+
+.messages-received {
+  display: grid;
+  gap: 8px;
+  justify-self: right;
+}
+
+.sent {
+  background-color: $clr-sent-bg;
+  color: $clr-sent-text;
+  @include text-preset(typo.$text-preset-5);
+  border-radius: 10px 10px 4px 10px;
+  padding: 8px;
+  width: fit-content;
+  max-width: 128px;
+}
+
+.received {
+  background-color: $clr-white;
+  @include text-preset(typo.$text-preset-5);
+  color: $clr-body-text;
+  border-radius: 10px 10px 4px 10px;
+  padding: 8px;
+  width: fit-content;
+  max-width: 136px;
+  box-shadow: 0 10px 5px -5px hsla(271, 36%, 24%, 0.0453);
+  justify-self: end;
+}
+
+.option {
+  padding: 8px;
+  border-radius: 10px 10px 4px 10px;
+  background: -webkit-linear-gradient(-78deg, #e844ff, #8739ff);
+  background: linear-gradient(-78deg, #e844ff, #8739ff);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 151px;
+  box-shadow: 0 10px 5px -5px hsla(271, 36%, 24%, 0.0453);
+}
+
+.option-details {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  @include text-preset(typo.$text-preset-5);
+  color: $clr-white;
+}
+
+.circle {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid $clr-circle;
+}
+
+.price {
+  color: $clr-white;
+  @include text-preset(typo.$text-preset-3);
+}
+
+.attachments {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0;
+}
+
+.attachment-img {
+  border-radius: 10px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 10px 5px -5px hsla(271, 36%, 24%, 0.0453);
+}
+
+.sent,
+.received,
+.attachment-img,
+.option {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.6s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,50 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: -webkit-linear-gradient(-73deg, #e844ff, #8739ff);
+  background: linear-gradient(-73deg, #e844ff, #8739ff);
+  padding: 26px 16px 16px 16px;
+  border-radius: 20px 20px 6px 6px;
+  box-shadow: 0 0 13px 0 hsla(271, 36%, 24%, 0.2512);
+}
+
+.header-details {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 1px solid $clr-white;
+}
+
+.user-info {
+  display: grid;
+  @include text-preset(typo.$text-preset-5);
+}
+
+.name {
+  color: $clr-white;
+}
+
+.availability {
+  color: $clr-availability;
+}
+
+.more-details {
+  display: grid;
+  gap: 1px;
+}
+
+.more-details span {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  display: block;
+  background-color: $clr-white;
+}

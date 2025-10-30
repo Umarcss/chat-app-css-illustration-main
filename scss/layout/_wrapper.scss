@@ -1,0 +1,71 @@
+@use "../abstracts" as *;
+
+.site-wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  max-width: 1680px;
+  margin: 0 auto;
+}
+
+#chat-app {
+  margin-top: 64px;
+}
+
+.purple-pattern {
+  width: 510px;
+  height: 1018px;
+  background: -webkit-linear-gradient(27deg, #e844ff, #8739ff);
+  background: linear-gradient(27deg, #e844ff, #8739ff);
+  border-radius: 255px;
+  position: absolute;
+  top: -509px;
+  left: -322px;
+  z-index: -1;
+  pointer-events: none;
+  @include respond(small, min) {
+    top: -537px;
+    left: -126px;
+  }
+  @include respond(large, min) {
+    top: unset;
+    bottom: 100px;
+    left: -90px;
+  }
+}
+
+.gray-pattern {
+  width: 510px;
+  height: 1018px;
+  background: -webkit-linear-gradient(27deg, #e844ff, #8739ff);
+  background: linear-gradient(27deg, #e844ff, #8739ff);
+  border-radius: 255px;
+  opacity: 0.03;
+  position: absolute;
+  bottom: -509px;
+  right: -323px;
+  z-index: -1;
+  pointer-events: none;
+  @include respond(small, min) {
+    bottom: -537px;
+    right: -126px;
+  }
+  @include respond(large, min) {
+    top: 119px;
+    bottom: unset;
+    right: -185px;
+  }
+}
+
+main {
+  @include respond(large, min) {
+    display: grid;
+    grid-template-columns: 247px 1fr;
+    gap: 120px;
+    grid-template-areas: "mobile text";
+    align-items: center;
+    max-width: 812px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

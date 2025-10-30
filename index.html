@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Chat App CSS Illustration</title>
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <div class="purple-pattern"></div>
+      <div class="gray-pattern"></div>
+      <main>
+        <section id="chat-app" aria-labelledby="chat-app-heading">
+          <h1 id="chat-app-heading" class="visually-hidden">
+            Chat App Illustration
+          </h1>
+          <div class="mobile-wrapper">
+            <div class="white-blob"></div>
+            <div class="mobile-container">
+              <div class="app-header">
+                <div class="header-details">
+                  <img
+                    src="./images/chevron-left.svg"
+                    alt="Go back"
+                    width="4"
+                    height="10"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <img
+                    src="./images/avatar.jpg"
+                    width="24"
+                    height="24"
+                    class="avatar"
+                    alt="Avatar image of Samuel Green"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="user-info">
+                    <p class="name">Samuel Green</p>
+                    <p class="availability">Available to Walk</p>
+                  </div>
+                </div>
+                <div class="more-details">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="messages-container">
+                <div class="messages-sent">
+                  <div class="sent">
+                    <p>That sounds great. I’d be happy with that.</p>
+                  </div>
+                  <div class="sent">
+                    <p>
+                      Could you send over some pictures of your dog, please?
+                    </p>
+                  </div>
+                </div>
+                <div class="messages-received">
+                  <div class="attachments">
+                    <img
+                      src="./images/dog-image-1.jpg"
+                      alt="A happy dog"
+                      class="attachment-img"
+                      width="40"
+                      height="40"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <img
+                      src="./images/dog-image-2.jpg"
+                      alt="A happy dog"
+                      class="attachment-img"
+                      width="40"
+                      height="40"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <img
+                      src="./images/dog-image-3.jpg"
+                      alt="A happy dog"
+                      class="attachment-img"
+                      width="40"
+                      height="40"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="received">
+                    <p>Here are a few pictures. She’s a happy girl!</p>
+                  </div>
+                  <div class="received">
+                    <p>Can you make it?</p>
+                  </div>
+                </div>
+                <div class="messages-sent">
+                  <div class="sent">
+                    <p>
+                      She looks so happy! The time we discussed works. How long
+                      shall I take her out for?
+                    </p>
+                  </div>
+                  <div class="option">
+                    <div class="option-details">
+                      <span class="circle"></span>
+                      <p>30 minute walk</p>
+                    </div>
+                    <span class="price">$29</span>
+                  </div>
+                  <div class="option">
+                    <div class="option-details">
+                      <span class="circle"></span>
+                      <p>1 hour walk</p>
+                    </div>
+                    <span class="price">$49</span>
+                  </div>
+                </div>
+                <div class="messages-received"></div>
+                <div class="app-send-message">
+                  <span>Type a message…</span>
+                  <span class="send-btn">
+                    <img src="./images/arrow.svg" alt="Send message" />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="booking" aria-labelledby="booking-heading">
+          <h2 id="booking-heading">Simple booking</h2>
+          <p>
+            Stay in touch with our dog walkers through the chat interface. This
+            makes it easy to discuss arrangements and make bookings. Once the
+            walk has been completed you can rate your walker and book again all
+            through the chat.
+          </p>
+        </section>
+      </main>
+    </div>
+    <script>
+      const messages = document.querySelectorAll(
+        ".sent, .received, .option, .attachment-img"
+      );
+      messages.forEach((msg, i) => {
+        setTimeout(() => msg.classList.add("show"), i * 600);
+      });
+    </script>
+  </body>
+</html>

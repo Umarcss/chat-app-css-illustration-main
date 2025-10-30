@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+.app-send-message {
+  width: 100%;
+  height: 33.91px;
+  background-color: $clr-white;
+  @include text-preset(typo.$text-preset-5);
+  color: $clr-placeholder;
+  border-radius: 16.95px;
+  padding: 11.15px 16.95px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.send-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24.22px;
+  height: 24.22px;
+  border-radius: 50%;
+  background-color: $clr-black;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
